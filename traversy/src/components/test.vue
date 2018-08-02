@@ -1,6 +1,8 @@
 <template>
     <div class="test">
         <h1>{{title}}</h1>
+        <p v-if = "showName">{{user.firstName}}</p>
+        <p v-else></p>
     </div>
 </template>
 
@@ -10,7 +12,12 @@ export default {
   name: "test",
   data() {
     return {
-      title: "Hello World"
+      title: "Hello World",
+      user:{
+          firstName: "Scott",
+          lastName: "Smith"
+      },
+      showName: false
     };
   }
 };
